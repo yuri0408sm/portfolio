@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');/*importo fonte*/
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Monomaniac+One&family=Share+Tech+Mono&display=swap');
+
+:root{/*criada uma variavel global para que seja possivel mudar certa informação de uma vez so no codico inteiro*/
+    --cor-principal:#CD1818;
+    --cor-segundaria:#116D6E;/*se declara desse jeito*/
+    --cor-hover:#ffffff;
+
+    --font-principal:'Share Tech Mono', monospace;
+
+}/*chama a variavel com (VAR) atars uma das variaveis*/
+
+*{ /*seleciona todo o conteudo e deixa sem padrão(deixa como original)*/
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    /* height: 100vh; garante que vai usasr 100% da tela */
+    padding: 8px 15px;/* mudou tamanho para cabar tudo*/
+    box-sizing: border-box; /*garante que o conteudo não saia da tela*/
+    background-color:rgb(168, 172, 184); /*cor de fundo*/
+    color: #3A4259;/*cor da letra*/
+}
+.um{ /*calse do html*/
+    color:brown;
+}
+h1{
+    font-weight: bold;
+}
+h1{
+    font-weight: bold;
+}
+
+span{
+    color: #5a1177;
+    border: 1px solid #5a1177;/*grosura da borda*/
+    padding: 10px;/*px que a borda vai ficar da escrita*/
+}
+.apresenta{
+    padding: 5% 10%; /*tamanho da margem em todos os lados, desse elemento*/
+    display: flex; /*alinha o conteúdo(cria um "bloco")*/
+    align-items: center;/*centraliza*/
+    justify-content: space-between; /*separação de conteudo por flaxbox*/
+    gap: 82px;/*garante que o texto e a aimagem fiquem sempre com a mesma distancia*/
+}
+.seçao_tex{/*seção html*/
+    gap: 30px;/*depois que alinhou em coluna decidiu o espaçamento entre elas*/
+    font-family: 'Monomaniac One', sans-serif;/*estilo da fonte (fonte importada)*/
+    width: 50%; /*para acompanhar o tamaho da tela. e como os textos estão nessa clase e ele ocupa 50% da tela*/
+    display: flex; /*cria um bloco dessa clase para poder mexer*/
+    flex-direction: column;/*deixar em coluna*/
+    
+}
+.seçao_tex_ti{
+   font-size: 2.25rem;/*tamanho da font deixa em rem para acompanhar tamanho da tela*/
+   
+}
+.seçao_tex_p{
+    font-size: 2.25rem;/*deixa uma medida que muda de tamanho de acordo com a tela*/
+    line-height: 44px /*espaçamento de linha*/
+}
+.seçao_tex_link{
+    
+    display: flex; /*podemos mecher na dispossição de objetos*/
+    flex-direction: column;/*deixamos em coluna*/
+    justify-content: space-between;/*espçamento de blocos especifico*/
+    align-items: center;/*deixou centralizada na página*/
+    gap: 32px;/*separando os elementos*/    
+}
+
+
+ .seçao_tex_link_link{/*hostilização dos botoes*/
+    width: 50%;/*acompanha tamanho da tela*/
+    padding: 18px 150px;/*determina margem vertica e horizontal (nessa ordem)*/
+    display: flex; /*deixou como flax (tudo na esqueda)*/
+    justify-content: center; /*centralizou tudo que esta dentro (escrita e imagem)*/
+    gap:14px;/*deu um espaço entre os dois*/
+    border: 3px solid var(--cor-principal); /*chamada a variavel*/
+    text-align: center;/*centralizou a escrita no botão*/
+    border-radius: 18px;/*curvatura das bordas do botão*/
+    font-size: 1.5rem;
+    text-decoration:none;/*tirou a hostilização que vinha junto(sublinhado do link)*/
+    color: var(--cor-principal);/*cor do texto*/
+    font-family: var(--font-principal);
+    transition: 0.3s;/*tempo de transição*/
+    cursor: pointer;/*cursor passar por cima muda as coisas*/
+}
+.seçao_tex_link_link:hover{ /*Muda ao passar o cursor por cima (usar essa config)*/
+    border: 4px solid rgb(124, 153, 218);/*borda que ira mudar (px e cor)*/
+    background-color:var(--cor-hover)/*cor que ficara no fundo*/
+}
+.acesse{
+    text-align: center;
+    font-family:var(--font-principal);
+    font-size: 2.37rem;
+}
+
+.rodape{
+    padding: 28px;/*celecionar tudo ao redor*/
+    color: var(--cor-principal);
+    background-color: var(--cor-segundaria);
+    text-align: center;
+    font-family:var(--font-principal);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.link_alura{
+    text-decoration:none;
+    color: var(--cor-principal);
+}
+
+.cabeçario{
+    padding: 2% 0% 0% 10%;/*deixou com um espaçamento em % da tela */
+}
+
+.cabeçario_nav{
+    display: flex;/*criou um box para mover tudo que tiver dentro*/
+    gap: 80px;/*add espaçamento entre eles*/
+}
+
+.home_nav{
+    font-family: var(--font-principal);
+    font-size: 2rem;
+    font-weight: 400;
+    color: #8a0707;
+    text-decoration:none;
+}
+
+.apresentacao__conteudo__texto a{
+    text-decoration: none;
+    color: var(--cor-segundaria)
+}
+
+.img_principal{
+    width: 50%;/*para acaompanahr o aumento da tela*/
+    border: 6px solid;
+    border-radius: 18px;
+    color: var(--cor-segundaria);
+}
+
+@media(max-width:1200px)/*maximo de px suportado*/{
+    .apresenta{
+        flex-direction: column-reverse;/*passou dos 1200px o conteudo fica em coluna e muda de local (inverte)*/
+        padding: 5%; /*diminuiu a margem */
+    }
+
+    .cabeçario{
+        padding: auto;/*deixou com mais espaçamento do topo*/
+    }
+
+    .cabeçario_nav{
+        justify-content: center;/*sempre far centralizado na página*/
+    }
+
+    .seçao_tex{
+        width: auto; /*o conteudo vai se auto alocar no espaço*/
+    }
+
+}/*para fazer com que oconteudo fique no tamanho
+ certo idependente do tamanho da tela. a condição para ele usar o
+ outro leyout é o:max-width:1200px quando estiver 1200 ou + vai ser vdd e vai funcionar*/
+
+/**/
